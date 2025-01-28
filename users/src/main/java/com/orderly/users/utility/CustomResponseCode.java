@@ -18,10 +18,11 @@ public enum CustomResponseCode {
     UNAUTHORIZED("USR-4003", "Unauthorized access"),
     INTERNAL_SERVER_ERROR("USR-5001", "Internal server error"),
 
-    INVALID_EMAIL("6001", "Kindly enter a valid email"),
-    PASSWORD_NOT_STRONG("USR-6002", "Kindly ensure password is at least 8 digits long."),
-    PASSWORD_MISMATCH("USR-6003", "Kindly ensure that both password are matching"),
-    DUPLICATE_EMAIL("USR-6004", "Email already exists!");
+    INVALID_EMAIL("USR-0001", "Kindly enter a valid email"),
+    PASSWORD_NOT_STRONG("USR-0002", "Kindly ensure password is at least 8 digits long."),
+    PASSWORD_MISMATCH("USR-0003", "Kindly ensure that both password are matching"),
+    DUPLICATE_EMAIL("USR-0004", "Email already exists!"),
+    EMPTY_FIELD("USR-0005", "All inputs must be filled out.");
 
     private final String code;
     private final String message;

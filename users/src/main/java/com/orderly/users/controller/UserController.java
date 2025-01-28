@@ -20,10 +20,8 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<ApiResponse<String>> register(@RequestBody RegisterRequest registerRequest) throws CustomException {
-        userService.registerUser(registerRequest);
-        return ResponseEntity.ok(new ApiResponse<String>(CustomResponseCode.CREATED.getCode(), CustomResponseCode.CREATED.getMessage(), null)
-
-        );
+    public ResponseEntity<ApiResponse<User>> register(@RequestBody RegisterRequest registerRequest) throws CustomException {
+        ApiResponse<User> response = userService.registerUser(registerRequest);
+        return ResponseEntity.ok(response);
     }
 }
