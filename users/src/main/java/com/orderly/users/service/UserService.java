@@ -66,6 +66,8 @@ public class UserService {
 
         httpSession.setAttribute("userId", savedUser.getId());
 
+
+
         return new ApiResponse<User>(
                 CustomResponseCode.CREATED.getCode(),
                 CustomResponseCode.CREATED.getMessage(),
